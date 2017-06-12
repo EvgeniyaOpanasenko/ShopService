@@ -12,6 +12,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
+
+
 @SpringBootApplication()
 public class Application extends SpringBootServletInitializer {
     private static final Logger logger = LoggerFactory.getLogger(Application.class);

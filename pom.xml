@@ -9,7 +9,13 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>ShopService</name>
-    <packaging>war</packaging>
+
+    <properties>
+        <start-class>kiev.Application</start-class>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -18,11 +24,6 @@
     </parent>
 
     <dependencies>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -52,26 +53,23 @@
         </dependency>
 
         <dependency>
-            <groupId>org.jboss.as</groupId>
-            <artifactId>jboss-as-ejb-client-bom</artifactId>
-            <version>7.1.0.Final</version>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.as</groupId>
-            <artifactId>jboss-as-jms-client-bom</artifactId>
-            <version>7.1.0.Final</version>
-            <type>pom</type>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
             <scope>provided</scope>
         </dependency>
+
     </dependencies>
 
+
     <build>
+        <finalName>ShopService</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -79,47 +77,5 @@
             </plugin>
         </plugins>
     </build>
-    <properties>
-        <start-class>demo.Application</start-class>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-    </properties>
-    <repositories>
-        <repository>
-            <id>spring-snapshots</id>
-            <name>Spring Snapshots</name>
-            <url>http://repo.spring.io/snapshot</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>http://repo.spring.io/milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>spring-snapshots</id>
-            <name>Spring Snapshots</name>
-            <url>http://repo.spring.io/snapshot</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>http://repo.spring.io/milestone</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
-</project>
 
+</project>
